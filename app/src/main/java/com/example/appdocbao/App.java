@@ -9,5 +9,6 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         Stetho.initializeWithDefaults(this);
+        //chinh sửa
     }
 }
