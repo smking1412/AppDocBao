@@ -11,5 +11,6 @@ public class App extends Application {
         Stetho.initializeWithDefaults(this);
         //chinh sửa
         //chỉnh sửa lần 2
+        // Chỉnh sửa tại web
     }
 }
