@@ -10,5 +10,6 @@ public class App extends Application {
         super.onCreate();
         Stetho.initializeWithDefaults(this);
         //chinh sửa
+        //chỉnh sửa lần 2
     }
 }
