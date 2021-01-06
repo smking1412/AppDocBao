@@ -38,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
 
         listUsers = sqlHelperUser.getAllUserAdvanced();
 
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,6 +52,8 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), "Đăng nhập thành công!!!", Toast.LENGTH_LONG).show();
                     Intent intentLogin = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intentLogin);
+                    finish();
+
                 } else{
                    edtPassword.setError("Tài khoản và mật khẩu không chính xác.");
                 }
@@ -62,6 +65,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intentR = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intentR);
+                finish();
             }
         });
     }
@@ -75,6 +79,7 @@ public class LoginActivity extends AppCompatActivity {
         }
         return checkUser;
     }
+
 
     private boolean validateEmail(){
         String email = edtEmail.getEditText().getText().toString().trim();

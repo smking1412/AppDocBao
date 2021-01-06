@@ -2,6 +2,7 @@ package com.example.appdocbao;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -83,8 +84,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         if (id == R.id.nav_dangnhap) {
-            Intent intentLG = new Intent(MainActivity.this, LoginActivity.class);
-            startActivity(intentLG);
+                Intent intentLG = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intentLG);
+                finish();
+        }
+        if (id == R.id.nav_logout){
+            finish();
+            System.exit(0);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

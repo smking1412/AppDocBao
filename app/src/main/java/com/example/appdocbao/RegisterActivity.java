@@ -27,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
     private static final Pattern NAME_PATTERN =
             Pattern.compile("^" +
                     "(?=.*[a-zA-Z])" +      //any letter
-                    "(?=\\S+$)" +           //no white spaces
+//                    "(?=\\S+$)" +           //no white spaces
                     ".{0,32}" +               //at least 4 characters
                     "$");
 
@@ -66,9 +66,10 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }else {
                     sqlHelperUser.insertNewUser(email, password, name, numberPhone);
-                    Toast.makeText(getBaseContext(), "Bạn đã đăng ký thành công"+ email, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Bạn đã đăng ký thành công "+ email, Toast.LENGTH_LONG).show();
                     Intent intentRegister = new Intent(RegisterActivity.this, LoginActivity.class);
                     startActivity(intentRegister);
+                    finish();
                 }
             }
         });
